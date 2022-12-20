@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "7a4a382e-9628-444a-a70e-dacf6fdd3985",
+		"name": "Gateways Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18377672"
+	},
+	"item": [
+		{
+			"name": "Get all gateways",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/gateways",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"gateways"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all devices using GatewayId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/devices/639c93cd271a6e5e56cbbed6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"devices",
+						"639c93cd271a6e5e56cbbed6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Gateway",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"serial\":\"unqireser1234\",\"name\":\"name gateway\",\"IP\":\"0.0.0.0\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/gateways",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"gateways"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Device",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/api/devices/61080270311d462d1c1d0de5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"devices",
+						"61080270311d462d1c1d0de5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Device",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"uid\":20962,\"vendor\":\"vendornaaaming\",\"status\":1,\"gatewayId\":\"639c93cd271a6e5e56cbbed6\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5050/api/devices",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"api",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
